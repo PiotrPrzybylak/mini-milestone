@@ -22,6 +22,8 @@ public class Flight {
             throw new RuntimeException("Ids need to be unique: " + id);
         }
 
+        ids.add(id);
+
         this.id = id;
         this.captain = captain;
         this.coPilot = coPilot;
