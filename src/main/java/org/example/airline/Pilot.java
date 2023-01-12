@@ -1,10 +1,13 @@
 package org.example.airline;
 
-public class Pilot {
+import java.time.LocalDate;
+
+public class Pilot extends Employee {
 
     private boolean hasAnalogCompass;
 
-    public Pilot(boolean hasAnalogCompass) {
+    public Pilot(String name, LocalDate dateOfBirth, boolean hasAnalogCompass) {
+        super(name, dateOfBirth);
         this.hasAnalogCompass = hasAnalogCompass;
     }
 
