@@ -10,4 +10,7 @@ public class Attendant {
         this.languages = Set.copyOf(languages);
     }
 
+    public boolean isReady(Language language) {
+        return languages.contains(language);
+    }
 }

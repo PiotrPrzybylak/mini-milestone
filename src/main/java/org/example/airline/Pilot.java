@@ -14,4 +14,8 @@ public class Pilot {
         }
         hasAnalogCompass = true;
     }
+
+    public boolean isReady() {
+        return hasAnalogCompass;
+    }
 }

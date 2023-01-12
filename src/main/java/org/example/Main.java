@@ -13,13 +13,17 @@ import static org.example.airline.Language.GERMAN;
 public class Main {
     public static void main(String[] args) {
 
-        Flight flight = new Flight("123", new Pilot(true), new Pilot(true), List.of(), ENGLISH);
+        Pilot pilot1 = new Pilot(true);
+        Pilot pilot2 = new Pilot(false);
+        Flight flight = new Flight("123", pilot1, pilot2, List.of(), ENGLISH);
         flight.isReadyForTakeOff();
 
-        Flight flight2 = new Flight("1234", new Pilot(true), new Pilot(false), List.of(
+        pilot2.awardWithACompass();
+
+        Flight flight2 = new Flight("1234", pilot2, pilot1, List.of(
                 new Attendant(Set.of(ENGLISH, GERMAN)),
                 new Attendant(Set.of(ENGLISH, GERMAN)),
-                new Attendant(Set.of(GERMAN))
+                new Attendant(Set.of(ENGLISH))
         ), ENGLISH);
         flight2.isReadyForTakeOff();
     }
