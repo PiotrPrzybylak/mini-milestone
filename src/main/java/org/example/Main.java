@@ -10,10 +10,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Flight flight = new Flight("123", new Pilot(), new Pilot(), List.of(), Language.ENGLISH);
+        Flight flight = new Flight("123", new Pilot(true), new Pilot(true), List.of(), Language.ENGLISH);
         flight.isReadyForTakeOff();
 
-        Flight flight2 = new Flight("1234", new Pilot(), new Pilot(), List.of(
+        Flight flight2 = new Flight("1234", new Pilot(true), new Pilot(false), List.of(
                 new Attendant(),
                 new Attendant(),
                 new Attendant()
